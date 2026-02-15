@@ -1,0 +1,92 @@
+/* bg */
+.bg {
+  background: linear-gradient(
+    -45deg,
+    #e0e0e0,
+    #d6d6d6,
+    #cccccc,
+    #e8e8e800
+  );
+
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Page centering wrapper */
+.book-wrapper {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Book Now box */
+.book {
+  background: white;
+  color: black;
+  padding: 2rem 3rem;
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Button */
+.book button {
+  padding: 0.7rem 2rem;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.book button:hover {
+  background: gray;
+  transform: translateY(-2px);
+}
+
+.book-wrapper a {
+  text-decoration: none;
+}
+
+
+.text {
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.5rem;
+
+}
+
+.text p {
+  max-width: 650px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.7;
+}
+
+.house{
+  margin-top: 35px;
+  padding: 4rem;
+}

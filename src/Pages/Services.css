@@ -1,0 +1,150 @@
+.services-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #111;
+  color: white;
+}
+
+/* HERO */
+.services-hero {
+  position: relative;
+  height: 60vh;
+  background: url("../assets/glitter2.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.services-hero h1 {
+  position: relative;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  z-index: 2;
+  font-family: "Playfair Display", serif;
+}
+
+/* SERVICES CONTAINER */
+.services-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* CARD */
+.service-card {
+  display: grid;
+  grid-template-columns: 250px 1fr 150px 150px;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.service-content {
+  padding: 2rem;
+}
+
+.service-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-content p {
+  opacity: 0.8;
+}
+
+/* PRICE */
+.service-price {
+  text-align: center;
+}
+
+.service-price h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* BUTTON */
+.service-action {
+  text-align: center;
+}
+
+.book-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  background-color: #2b1f2f;
+}
+
+.book-btn a{
+    text-decoration: none;
+}
+
+/* DELUXE STYLE */
+.deluxe {
+  background: linear-gradient(135deg, #1a1a1a, #c0b1b1);
+
+}
+
+.deluxe-btn {
+  background: black;
+  color: white;
+}
+
+.deluxe-btn:hover {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.733);
+  background-color: #2b1f2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .service-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-image {
+    height: 250px;
+  }
+
+  .service-price {
+    margin-bottom: 1rem;
+  }
+}
+
+.text{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    margin-top: 34px;
+}

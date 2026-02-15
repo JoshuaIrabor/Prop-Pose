@@ -1,0 +1,153 @@
+.hero-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  /* Parallax base */
+  background: url("../assets/glitter2.png") center center / cover no-repeat;
+  animation: slowZoom 30s ease-in-out infinite alternate;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle zoom parallax */
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Sparkles */
+.sparkle-layer {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.8), transparent),
+    radial-gradient(1.5px 1.5px at 70% 40%, rgba(255,255,255,.6), transparent),
+    radial-gradient(2px 2px at 40% 80%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,.5), transparent);
+  animation: sparkleMove 20s linear infinite;
+  z-index: 0;
+}
+
+/* Sparkle drift */
+@keyframes sparkleMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* CTA button */
+.hero-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-card {
+  position: relative;
+  min-width: 60vh;
+  min-height:30vh;
+  width: 220px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-column {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  z-index: 2;
+}
+
+.image-column {
+  
+  display: flex;
+  flex-direction: row;   
+  gap: 20px;
+  width: auto;
+  z-index: 2;
+}
+
+
+.image-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.image-slide.active {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .image-column {
+    position: relative;
+    right: 0;
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

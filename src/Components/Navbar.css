@@ -1,0 +1,123 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(90deg, #1c1b1b 0%, #1a1717 100%);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* HAMBURGER */
+.menu-icon {
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* SIDE SLIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #242222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu a {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side-menu a:hover {
+  background-color: #fff;
+  color: #242424;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+/* CLOSE (X) ICON INSIDE MENU */
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sign-button{
+
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  color: black;
+  background: white;
+  text-decoration: none;
+  font-weight: 100;
+  transition: all 0.3s ease;
+
+  position: absolute;
+  right: 100px; /* distance from the right */
+  top: 50%;    /* vertically center */
+  transform: translateY(-50%);
+}
+
+
