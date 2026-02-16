@@ -4,9 +4,9 @@ import {motion} from "framer-motion"
 
 export default function Hero() {
   const imageSets = [
-    ["/public/assets/1.jpg", "/public/assets/4.jpg", "/public/assets/1.jpg"],
-    ["/public/assets/2.jpg", "/public/assets/5.jpg", "/public/assets/2.jpg"],
-    ["/public/assets/3.jpg", "/public/assets/6.jpg", "/public/assets/3.jpg"]
+    ["/assets/1.jpg", "/assets/4.jpg", "/assets/1.jpg"],
+    ["/assets/2.jpg", "/assets/5.jpg", "/assets/2.jpg"],
+    ["/assets/3.jpg", "/assets/6.jpg", "/assets/3.jpg"]
   ];
 
   const [indexes, setIndexes] = useState([0, 0, 0]);
