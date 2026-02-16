@@ -6,7 +6,7 @@ import '../App.css'
 function Home() {
     return (
         <div>
-            <title>PPB</title>
+            <title>Prop'n'Pose</title>
             <Hero />
             <Content />
             
